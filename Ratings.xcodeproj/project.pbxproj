@@ -11,6 +11,8 @@
 		8107E786205B44BB006EFACA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8107E785205B44BB006EFACA /* ViewController.swift */; };
 		8107E788205B44BB006EFACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8107E787205B44BB006EFACA /* Assets.xcassets */; };
 		8107E78B205B44BB006EFACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8107E789205B44BB006EFACA /* Main.storyboard */; };
+		81F5E319205B8BF1008C637D /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F5E318205B8BF1008C637D /* ScriptingBridge.framework */; };
+		81F5E31C205B8C2D008C637D /* iTunesBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5E31B205B8C2D008C637D /* iTunesBridge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		8107E78A205B44BB006EFACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8107E78C205B44BB006EFACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8107E78D205B44BB006EFACA /* Ratings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ratings.entitlements; sourceTree = "<group>"; };
+		81F5E318205B8BF1008C637D /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		81F5E31B205B8C2D008C637D /* iTunesBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesBridge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F5E319205B8BF1008C637D /* ScriptingBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +44,7 @@
 			children = (
 				8107E782205B44BB006EFACA /* Ratings */,
 				8107E781205B44BB006EFACA /* Products */,
+				81F5E317205B8BF1008C637D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +59,7 @@
 		8107E782205B44BB006EFACA /* Ratings */ = {
 			isa = PBXGroup;
 			children = (
+				81F5E31A205B8C0E008C637D /* Bridge */,
 				8107E783205B44BB006EFACA /* AppDelegate.swift */,
 				8107E785205B44BB006EFACA /* ViewController.swift */,
 				8107E787205B44BB006EFACA /* Assets.xcassets */,
@@ -61,6 +68,22 @@
 				8107E78D205B44BB006EFACA /* Ratings.entitlements */,
 			);
 			path = Ratings;
+			sourceTree = "<group>";
+		};
+		81F5E317205B8BF1008C637D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81F5E318205B8BF1008C637D /* ScriptingBridge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81F5E31A205B8C0E008C637D /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				81F5E31B205B8C2D008C637D /* iTunesBridge.swift */,
+			);
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +158,7 @@
 			files = (
 				8107E786205B44BB006EFACA /* ViewController.swift in Sources */,
 				8107E784205B44BB006EFACA /* AppDelegate.swift in Sources */,
+				81F5E31C205B8C2D008C637D /* iTunesBridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +289,7 @@
 				CODE_SIGN_ENTITLEMENTS = Ratings/Ratings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Y45PW9XN5L;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Ratings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ratings;
@@ -281,7 +305,7 @@
 				CODE_SIGN_ENTITLEMENTS = Ratings/Ratings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Y45PW9XN5L;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Ratings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ratings;
