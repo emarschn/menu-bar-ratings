@@ -109,18 +109,21 @@ public class MenuBarController {
 extension MenuBarController {
     
     @objc func update() {
-        if let track = getCurrentTrack() {
-            if lastTrackId != track.id!() {
-                lastTrackId = track.id!()
-                setupMenu()
+        let playing = isPlaying()
+        if playing {
+            if let track = getCurrentTrack() {
+                if lastTrackId != track.id!() {
+                    lastTrackId = track.id!()
+                    setupMenu()
+                }
             }
         } else {
-            let playing = isPlaying()
+            lastTrackId = 0
             if playing != lastPlaying {
-                lastPlaying = playing
                 setupMenu()
             }
         }
+        lastPlaying = playing
     }
     
     @objc func noRating(_ sender: Any) {
